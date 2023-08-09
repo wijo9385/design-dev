@@ -7,8 +7,9 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
-
 import styles from "./tailwind.css";
+import Nav from './components/nav';
+
 
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: styles },
@@ -26,6 +27,7 @@ export default function App() {
         <Links />
       </head>
       <body>
+        <Nav />
         <Outlet />
         <ScrollRestoration />
         <Scripts />
