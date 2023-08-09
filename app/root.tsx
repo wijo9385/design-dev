@@ -1,4 +1,3 @@
-import { cssBundleHref } from "@remix-run/css-bundle";
 import type { LinksFunction } from "@remix-run/node";
 import {
   Links,
@@ -13,10 +12,12 @@ import styles from "./tailwind.css";
 
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: styles },
+  { rel: "stylesheet", href: "https://use.typekit.net/djk5aqa.css" }
 ];
 
 export default function App() {
   return (
+    <>
     <html lang="en">
       <head>
         <meta charSet="utf-8" />
@@ -31,5 +32,6 @@ export default function App() {
         <LiveReload />
       </body>
     </html>
+    </> 
   );
 }
